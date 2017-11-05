@@ -1,0 +1,52 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,
+form,fieldset,legend,button,input,textarea,th,td  {margin:0;padding:0;}
+
+body,button,input,select,textarea{font:12px/1.5     tahoma,arial,\5b8b\4f53;}
+
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight: normal;}
+
+address,cite,dfn,em,var{font-style:normal;}
+
+code,kbd,pre,samp{font-family:courier new,courier,monospace;}
+
+small{font-size:12px;}
+
+ul,ol{list-style:none;}
+
+a{text-decoration:none;}
+
+a:hover{text-decoration:none;}
+
+sup{vertical-align:text-top;}
+
+sub{vertical-align:text-bottom;}
+
+legend{color:#000;}
+
+fieldset,img{border:0;}
+
+button,input,select,textarea{font-size:100%;}
+
+table{border-collapse:collapse;border-spacing:0;}
+/*清除浮动代码*/
+.clearfloat:after {display: block;clear: both;content: "";visibility: hidden;height: 0;}
+.clearfloat{zoom:1;}
+.hide{display: none;}
+.mt1{margin-top: 1px;}
+.mt24{margin-top: 24px;}
+.mt25{margin-top: 25px;}
+.mt30{margin-top: 30px;}
+.mt36{margin-top: 36px;}
+.mt40{margin-top: 40px;}
+.mt50{margin-top: 50px;}
+.mt60{margin-top: 60px;}
+.mt66{margin-top: 66px;}
+.mt78{margin-top: 78px;}
+.mt90{margin-top: 90px;}
+
+/* box-shadow:0 0 20px #E4E1E4; */
+.bold{font-weight: bold;}
+.center{text-align: center;position: relative;z-index: 2;}
+.white{color: #FFF;}
+
+
