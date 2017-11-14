@@ -260,12 +260,12 @@ $(document).ready(function() {
         var navHeight = $('.header').height();
         if (scrollTop > (themeSwiperTop - navHeight)) {
 
-            $('.j-theme-list-box2').addClass('fixed').addClass('headerSpacingTop');
+            $('.j-theme-list-box2').addClass('fixed').addClass('headerSpacingTop').css('background', '#FFF');
             $('.j-theme-list-box2 .swiper-button-prev').addClass('contentSpacingTop');
             $('.j-theme-list-box2 .swiper-button-next').addClass('contentSpacingTop');
 
         } else {
-            $('.j-theme-list-box2').removeClass('fixed').removeClass('headerSpacingTop');
+            $('.j-theme-list-box2').removeClass('fixed').removeClass('headerSpacingTop').css('background', '#FFF');
             $('.j-theme-list-box2 .swiper-button-prev').removeClass('contentSpacingTop');
             $('.j-theme-list-box2 .swiper-button-next').removeClass('contentSpacingTop');
         }
