@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <title>标题</title>
+    <title>七大主题-耀悦·Club52</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/h5reset.css">
     <link rel="stylesheet" href="css/swiper.min.css">
@@ -34,7 +35,7 @@
                             <li><a href="7DaZhuTi.html#Sparkling">闪耀</a></li>
                             <li><a href="7DaZhuTi.html#Edification">鉴赏</a></li>
                             <li><a href="7DaZhuTi.html#Discovery">探索</a></li>
-                            <li><a href="7DaZhuTi.html#Inner Peace">修心</a></li>
+                            <li><a href="7DaZhuTi.html#InnerPeace">修心</a></li>
                             <li><a href="7DaZhuTi.html#Enjoy">纵享</a></li>
                             <li><a href="7DaZhuTi.html#Challenge">挑战</a></li>
                             <li><a href="7DaZhuTi.html#Charity">善行</a></li>
@@ -51,12 +52,19 @@
         </header>
         <div class="row seven-themes">
             <img src="images/7daZhuTi-banner.png">
+            <div class="banner-text">
+                <p>一年 · 365天 · 52周 · 12个月</p>
+                <h2 class="special-text">时间流转</h2>
+                <h2 class="special-text">每年52场极致之旅</h2>
+                <p class="spacing-text">繁琐细节，由耀悦专家替您精心安排
+                </p>
+            </div>            
         </div>
         <div class="row">
-            <div class="theme-list-box">
-                <div class="theme-swiper">
+            <div class="theme-list-box j-theme-list-box2">
+                <div class="theme-swiper j-theme-swiper2">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><span>闪耀</span></div>
+                        <div class="swiper-slide theme-active"><span>闪耀</span></div>
                         <div class="swiper-slide"><span>鉴赏</span></div>
                         <div class="swiper-slide"><span>探索</span></div>
                         <div class="swiper-slide"><span>修心</span></div>
@@ -68,7 +76,7 @@
                 <div class="swiper-button-prev swiper-button-white"></div>
                 <div class="swiper-button-next swiper-button-white"></div>
             </div>
-            <div class="theme-content ">
+            <div  id="theme-content" class="theme-content ">
                 <ul>
                     <li id="Sparkling">
                         <div class="themes-text">
@@ -199,7 +207,7 @@
                             </div>
                         </div>
                     </li>
-                    <li id="Inner Peace">
+                    <li id="InnerPeace">
                         <div class="themes-text">
                             <h2>修心</h2>
                             <h3>Inner Peace</h3>
@@ -410,158 +418,7 @@
     </div>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/swiper.jquery.min.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-
-
-        /*导航*/
-        //滚动一屏后，导航置顶
-        $(window).scroll(function() {
-
-            if ($(window).scrollTop() > 0) {
-                $('.header').addClass('fixed');
-            } else {
-                $('.header').removeClass('fixed');
-            }
-        });
-        var isMenuOpen = false;
-
-        //打开菜单切换图标   
-        $('.menu-btn').on('click', function(event) {
-            $('.menu-wrapper ul li').show();
-            $('ul.submenu').hide();
-            $('.menu-wrapper .menu li.has-submenu>a').removeClass('back');
-            submenuIsShow = true;
-            //设置菜单高度
-            var screenHeight = $(window).height();
-            var menuHeight = screenHeight - $('.header').height();
-            if (isMenuOpen) {
-                $(this).removeClass('close');
-                isMenuOpen = false;
-                $('.menu-wrapper').hide();
-
-            } else {
-                $('.menu-wrapper ul.submenu').hide();
-                $(this).addClass('close');
-                isMenuOpen = true;
-                $('.menu-wrapper').css('height', menuHeight).show();
-            }
-
-
-        })
-        //开启子菜单
-        var submenuIsShow = true;
-        $('.menu-wrapper .menu li.has-submenu>a').on('click', function(event) {
-            event.preventDefault();
-            if (submenuIsShow) {
-                $(this).parent().siblings('li').hide();
-                $(this).next('ul.submenu').show();
-                $(this).addClass('back');
-                submenuIsShow = false;
-            } else {
-                $(this).parent().siblings('li').show();
-                $(this).next('ul.submenu').hide();
-                $(this).removeClass('back');
-                submenuIsShow = true;
-            }
-
-        })
-        //对 不包含子菜单的链接 定义事件 ，点击时关闭菜单
-        $(".menu-wrapper li:not('.has-submenu') a").on('click', function(event) {
-            isMenuOpen = false;
-            $('.menu-wrapper').hide();
-            $('.menu-btn').removeClass('close');
-        })
-        //防止事件冒泡
-        $('.menu-wrapper').on('click', function(event) {
-            event.stopPropagation();
-        })
-        /*导航结束*/
-
-        /*注册和微信*/
-        $('a.register').on('click', function() {
-
-        })
-        $('a.wechat-icon').on('click', function() {
-            alert('weixin')
-        })
-        /*注册和微信*/
-
-
-
-        /*底部轮播*/
-        var bottomBanner = new Swiper('.bottom-swiper', {
-            slidesPerView: 3,
-            prevButton: '.bottom-banner .swiper-button-prev',
-            nextButton: '.bottom-banner .swiper-button-next',
-        });
-        /*底部轮播*/
-        /*注册*/
-        $('#sendIdentifyingCodeBtn').on('click', function(event) {
-            event.preventDefault();
-
-            alert('发送验证码');
-        })
-        $('#submitBtn').on('click', function(event) {
-            event.preventDefault();
-
-            alert('提交申请');
-            $('.before-submit ').hide();
-            $('.submit-success').show();
-
-        })
-        /*注册*/
-        /*7大主题锚点跳转*/
-
-        var themeSwiper = new Swiper('.theme-swiper', {
-            slidesPerView: 5,
-            prevButton: '.theme-list-box .swiper-button-prev',
-            nextButton: '.theme-list-box .swiper-button-next',
-        });
-        $('.theme-swiper .swiper-slide').on('click', function() {
-            var index = $(this).index();
-            $(this).addClass('theme-active').siblings('.swiper-slide').removeClass('theme-active');
-            var ele = $('.theme-content>ul>li').eq(index);
-            $('html,body').animate({ scrollTop: $(ele).offset().top - 130 },
-                500
-            );
-        })
-        //滚动到网站导航，7大主题锚点跳转固定在网站导航下方
-        var themeSwiperTop = $('.theme-list-box').offset().top;
-
-        $(window).scroll(function() {
-            var scrollTop = $(window).scrollTop();
-            var navHeight = $('.header').height();
-            if (scrollTop > (themeSwiperTop - navHeight)) {
-
-                $('.theme-list-box').addClass('fixed');
-
-            } else {
-                $('.theme-list-box').removeClass('fixed');
-
-            }
-        });
-        /*7大主题锚点跳转*/
-        /*整个图可以点击*/
-        $('.themes-pic-item').on('click', function() {
-            window.location = $(this).find('a.to-detail').attr('href');
-        })
-        /*设置所有锚点滚动效果*/
-        $('a[href*="#"]:not([href="#"])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top-400
-                    }, 500);
-                    return false;
-                }
-            }
-        });  
-    /*设置所有锚点滚动效果*/         
-    });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
