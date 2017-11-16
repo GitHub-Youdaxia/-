@@ -292,6 +292,10 @@ $(document).ready(function() {
         window.location = $(this).find('a.to-detail').attr('href');
     })
 
+    document.addEventListener(‘touchstart‘,function(){
+       $('.j-theme-list-box2').css('background', '#FFF');
+
+    },false);
 });
 /*会员尊享*/
 $(document).ready(function() {

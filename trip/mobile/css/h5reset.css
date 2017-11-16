@@ -1,6 +1,6 @@
 ﻿/*Css reset*/
 body, div, dl, dt, dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,button,th,td,section{margin:0;padding:0;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
-table{border-collapse:collapse;border-spacing:0;}
+table{border-collapse:collapse;border-spacing:0;-webkit-touch-callout: none;-webkit-appearance: none; -webkit-tap-highlight-color:rgba(255,255,255,0) }
 fieldset,img {border:0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 address,caption, cite,code,dfn,em,i,strong,th,var{font-style:normal;font-weight:normal;}
 ol,ul {list-style:none;}
