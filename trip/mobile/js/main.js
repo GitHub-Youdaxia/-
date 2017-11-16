@@ -292,7 +292,7 @@ $(document).ready(function() {
         window.location = $(this).find('a.to-detail').attr('href');
     })
 
-    document.addEventListener(‘touchstart‘,function(){
+    document.addEventListener('touchstart',function(){
        $('.j-theme-list-box2').css('background', '#FFF');
 
     },false);
