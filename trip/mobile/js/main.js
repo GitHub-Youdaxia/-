@@ -293,7 +293,10 @@ $(document).ready(function() {
     })
 
     document.addEventListener('touchstart',function(){
-       $('.j-theme-list-box2').css('background', '#FFF');
+        if( $('.j-theme-list-box2')){
+             $('.j-theme-list-box2').css('background', '#FFF');
+        }
+       $('.header').addClass('fixed');
 
     },false);
 });
