@@ -297,8 +297,8 @@ $(document).ready(function() {
              $('.j-theme-list-box2').css('background', '#FFF');
         }
        $('.header').addClass('fixed').css({
-           background: '#FFF',
-           z-index: '2222'
+           'background': '#FFF',
+           'z-index': '2222'
        });
 
     },false);
