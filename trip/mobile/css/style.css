@@ -136,7 +136,7 @@ transform-origin:100% 100%;
 
 /*导航菜单*/
 .header-box{height:.89rem; }
-.header{height: .89rem;line-height: .89rem;position: relative;border-bottom: 1px solid #F6F4F7;z-index: 2222;}
+.header{height: .89rem;line-height: .89rem;position: relative;border-bottom: 1px solid #F6F4F7;z-index: 2222 !important;}
 .header.fixed{position: fixed;left: 0;top:0;width: 100%;background: #FFF;}
 .header .logo{position: absolute;left:.4rem ;top:0;z-index: 111;}
 .header .logo img{width: 1.6rem;height: 1.4rem;}
