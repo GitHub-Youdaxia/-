@@ -301,6 +301,14 @@ $(document).ready(function() {
            'z-index': '2222'
        });
 
+    },false);   
+     document.addEventListener('touchmove',function(){
+
+       $('.header').addClass('fixed').css({
+           'background': '#FFF',
+           'z-index': '2222'
+       });
+
     },false);
 });
 /*会员尊享*/
