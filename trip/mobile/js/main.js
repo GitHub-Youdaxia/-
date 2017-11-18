@@ -1,5 +1,13 @@
 /*公共js*/
 $(document).ready(function() {
+    /*滚动后，导航置顶*/
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 0) {
+            $('.header').addClass('fixed');
+        } else {
+            $('.header').removeClass('fixed');
+        }
+    });    
     /*导航*/
     var isMenuOpen = false;
     //打开菜单切换图标
@@ -97,15 +105,6 @@ $(document).ready(function() {
         paginationClickable: true,
     })
 
-    /*滚动一屏后，导航置顶*/
-    $(window).scroll(function() {
-        var screenHeight = $(window).height();
-        if ($(window).scrollTop() > screenHeight) {
-            $('.header').addClass('fixed');
-        } else {
-            $('.header').removeClass('fixed');
-        }
-    });
 
     /*滚动到主要内容*/
     $('#to-main-page').on('click', function() {
@@ -159,14 +158,7 @@ $(document).ready(function() {
 /*全年产品日历*/
 $(document).ready(function() {
 
-    /*滚动后，导航置顶*/
-    $(window).scroll(function() {
-        if ($(window).scrollTop() > 0) {
-            $('.header').addClass('fixed');
-        } else {
-            $('.header').removeClass('fixed');
-        }
-    });
+
     /*产品日历tab切换*/
     var monthSwiper = new Swiper('.month-swiper', {
         slidesPerView: 5,
@@ -210,14 +202,6 @@ $(document).ready(function() {
    var htmlFontSize = $('html').css('font-size').replace(/px/, "") * 1;
 
 
-    /*滚动一屏后，导航置顶*/
-    $(window).scroll(function() {
-        if ($(window).scrollTop() > 0) {
-            $('.header').addClass('fixed').addClass('spacingTop');
-        } else {
-            $('.header').removeClass('fixed');
-        }
-    });
     /*7大主题锚点跳转*/
     var themeSwiper = new Swiper('.j-theme-swiper2', {
         slidesPerView: 5,
@@ -313,15 +297,6 @@ $(document).ready(function() {
 });
 /*会员尊享*/
 $(document).ready(function() {
-    /*滚动一屏后，导航置顶*/
-    $(window).scroll(function() {
-        if ($(window).scrollTop() > 0) {
-            $('.header').addClass('fixed');
-        } else {
-            $('.header').removeClass('fixed');
-        }
-    });
-
     /*一星和二星tab切换*/
     var themeTabs = new Swiper('.star-two-list', {
         autoplay: 5000,
@@ -362,14 +337,6 @@ $(document).ready(function() {
 });
 /*会员申请*/
 $(document).ready(function() {
-    /*滚动后，导航置顶*/
-    $(window).scroll(function() {
-        if ($(window).scrollTop() > 0) {
-            $('.header').addClass('fixed');
-        } else {
-            $('.header').removeClass('fixed');
-        }
-    });
     /*注册*/
     $('#sendIdentifyingCodeBtn').on('click', function(event) {
         event.preventDefault();
