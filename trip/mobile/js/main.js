@@ -280,19 +280,16 @@ $(document).ready(function() {
         if( $('.j-theme-list-box2')){
              $('.j-theme-list-box2').css('background', '#FFF');
         }
-       $('.header').addClass('fixed').css({
-           'background': '#FFF',
-           'z-index': '2222'
-       });
-
     },false);   
      document.addEventListener('touchmove',function(){
-
-       $('.header').addClass('fixed').css({
-           'background': '#FFF',
-           'z-index': '2222'
-       });
-
+        if( $('.j-theme-list-box2')){
+             $('.j-theme-list-box2').hide();
+        }
+    },false);     
+     document.addEventListener('touchend',function(){
+        if( $('.j-theme-list-box2')){
+             $('.j-theme-list-box2').show();
+        }
     },false);
 });
 /*会员尊享*/
