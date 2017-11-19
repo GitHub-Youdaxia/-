@@ -283,7 +283,10 @@ $(document).ready(function() {
     },false);   
      document.addEventListener('touchmove',function(){
         if( $('.j-theme-list-box2')){
-             $('.j-theme-list-box2').hide();
+            if ($('.j-theme-list-box2').hasClass('fixed')) {
+                $('.j-theme-list-box2').hide();  
+            }
+   
         }
     },false);     
      document.addEventListener('touchend',function(){
