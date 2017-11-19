@@ -285,14 +285,14 @@ $(document).ready(function() {
      
         if( $('.j-theme-list-box2')){
             if ($('.j-theme-list-box2').hasClass('fixed')) {
-                    $('.j-theme-list-box2').hide('fast');                  
+                    $('.j-theme-list-box2').fadeOut("fast");                  
             }
    
         }
     },false);     
      document.addEventListener('touchend',function(){
         if( $('.j-theme-list-box2')){
-             $('.j-theme-list-box2').show('fast');
+             $('.j-theme-list-box2').fadeIn("fast");;
         }
     },false);
 });
