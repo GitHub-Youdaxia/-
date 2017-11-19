@@ -158,7 +158,10 @@ $(document).ready(function() {
 /*全年产品日历*/
 $(document).ready(function() {
 
-
+    //月份导航固定顶端网站导航下
+    if ($('.j-month-list').offset()) {
+        var monthSwiperTop = $('.j-month-list').offset().top;
+    }
     /*产品日历tab切换*/
     var monthSwiper = new Swiper('.month-swiper', {
         slidesPerView: 5,
@@ -167,17 +170,14 @@ $(document).ready(function() {
 
     });
     $('.month-swiper .swiper-slide').on('click', function() {
+          $('.header').removeClass('fixed');
         var index = $(this).index();
         $(this).addClass('month-active').siblings('.swiper-slide').removeClass('month-active');
         $('.month-content>ul>li').hide().eq(index).fadeIn('slow');
-        $('html,body').animate({ scrollTop: 0 },
-            300
-        );
+
+
     })
-    //月份导航固定顶端网站导航下
-    if ($('.j-month-list').offset()) {
-        var monthSwiperTop = $('.j-month-list').offset().top;
-    }
+
     $(window).scroll(function() {
         var scrollTop = $(window).scrollTop();
         var navHeight = $('.header').height();
