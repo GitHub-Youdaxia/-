@@ -183,14 +183,17 @@ $(document).ready(function() {
         var navHeight = $('.header').height();
         if (scrollTop > (monthSwiperTop - navHeight)) {
 
-            $('.j-month-list').addClass('fixed').addClass('headerSpacingTop');
-            $('.j-month-list .swiper-button-prev').addClass('contentSpacingTop');
-            $('.j-month-list .swiper-button-next').addClass('contentSpacingTop');
+            $('.j-month-list').addClass('fixed');
+            $('.j-month-list .swiper-button-prev');
+            $('.j-month-list .swiper-button-next');
+            if ( $('.j-month-list').hasClass('fixed')) {
+                $('.header').removeClass('fixed');
+            }            
 
         } else {
-            $('.j-month-list').removeClass('fixed').removeClass('headerSpacingTop');
-            $('.j-month-list .swiper-button-prev').removeClass('contentSpacingTop');
-            $('.j-month-list .swiper-button-next').removeClass('contentSpacingTop');
+            $('.j-month-list').removeClass('fixed');
+            $('.j-month-list .swiper-button-prev');
+            $('.j-month-list .swiper-button-next');
         }
     });
 
@@ -283,23 +286,12 @@ $(document).ready(function() {
     document.addEventListener('touchstart',function(){
         if( $('.j-theme-list-box2')){
              $('.j-theme-list-box2').css('background', '#FFF');
+        }        
+        if( $('.j-month-list')){
+             $('.j-month-list').css('background', '#FFF');
         }
     },false);   
-    //  document.addEventListener('touchmove',function(){
-     
-    //     if( $('.j-theme-list-box2')){
-    //         if ($('.j-theme-list-box2').hasClass('fixed')) {
-    //                 $('.j-theme-list-box2').fadeOut("fast");                  
-    //         }
-   
-    //     }
-    // },false);  
 
-    //  document.addEventListener('touchend',function(){
-    //     if( $('.j-theme-list-box2')){
-    //          $('.j-theme-list-box2').fadeIn("fast");;
-    //     }
-    // },false);
 });
 /*会员尊享*/
 $(document).ready(function() {
