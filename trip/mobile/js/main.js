@@ -244,14 +244,18 @@ $(document).ready(function() {
         var navHeight = $('.header').height();
         if (scrollTop > (themeSwiperTop - navHeight)) {
 
-            $('.j-theme-list-box2').addClass('fixed').addClass('headerSpacingTop').css('background', '#FFF');
-            $('.j-theme-list-box2 .swiper-button-prev').addClass('contentSpacingTop');
-            $('.j-theme-list-box2 .swiper-button-next').addClass('contentSpacingTop');
+            $('.j-theme-list-box2').addClass('fixed').css('background', '#FFF');
+            $('.j-theme-list-box2 .swiper-button-prev');
+            $('.j-theme-list-box2 .swiper-button-next');
+            if ( $('.j-theme-list-box2').hasClass('fixed')) {
+                $('.header').removeClass('fixed');
+            }
+            
 
         } else {
-            $('.j-theme-list-box2').removeClass('fixed').removeClass('headerSpacingTop').css('background', '#FFF');
-            $('.j-theme-list-box2 .swiper-button-prev').removeClass('contentSpacingTop');
-            $('.j-theme-list-box2 .swiper-button-next').removeClass('contentSpacingTop');
+            $('.j-theme-list-box2').removeClass('fixed').css('background', '#FFF');
+            $('.j-theme-list-box2 .swiper-button-prev');
+            $('.j-theme-list-box2 .swiper-button-next');
         }
         if (themeTops) {
             //加的数值越大，根据页面滚动位置导航条选中状态变化越早
@@ -281,21 +285,21 @@ $(document).ready(function() {
              $('.j-theme-list-box2').css('background', '#FFF');
         }
     },false);   
-     document.addEventListener('touchmove',function(){
+    //  document.addEventListener('touchmove',function(){
      
-        if( $('.j-theme-list-box2')){
-            if ($('.j-theme-list-box2').hasClass('fixed')) {
-                    $('.j-theme-list-box2').fadeOut("fast");                  
-            }
+    //     if( $('.j-theme-list-box2')){
+    //         if ($('.j-theme-list-box2').hasClass('fixed')) {
+    //                 $('.j-theme-list-box2').fadeOut("fast");                  
+    //         }
    
-        }
-    },false);  
-      
-     document.addEventListener('touchend',function(){
-        if( $('.j-theme-list-box2')){
-             $('.j-theme-list-box2').fadeIn("fast");;
-        }
-    },false);
+    //     }
+    // },false);  
+
+    //  document.addEventListener('touchend',function(){
+    //     if( $('.j-theme-list-box2')){
+    //          $('.j-theme-list-box2').fadeIn("fast");;
+    //     }
+    // },false);
 });
 /*会员尊享*/
 $(document).ready(function() {

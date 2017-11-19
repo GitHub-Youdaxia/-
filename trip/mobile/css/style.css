@@ -460,6 +460,7 @@ margin-left: auto;margin-right: auto;padding-bottom: 1rem;}
 .theme-list-box.index{width: 87.5%;margin-left: auto;margin-right: auto;}
 .theme-list-box.index .theme-swiper .swiper-slide span{width: 55%;}
 .theme-list-box.fixed{position: fixed;top: .89rem;left: 0;width: 100%;background: #FFF !important;z-index: 111;background: rgba(255, 255, 255, 1.0) !important;}
+.j-theme-list-box2.fixed{position: fixed;top: 0;left: 0;width: 100%;background: #FFF !important;z-index: 111;background: rgba(255, 255, 255, 1.0) !important;}
 .theme-swiper {width: 87.5%;height: .98rem;position: relative;margin-left: auto;margin-right: auto; overflow: hidden;background: #FFF !important;z-index: 111;}
 .theme-swiper .swiper-slide {box-sizing: border-box;color: #505050;line-height: .98rem;text-align: center;font-size: .28rem;text-align: center;}
 .theme-swiper .swiper-slide span{display: block;box-sizing: border-box;width: 46.15%;margin-left: auto;margin-right: auto;height: 100%;}
