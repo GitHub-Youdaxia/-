@@ -280,19 +280,33 @@ $(document).ready(function() {
         if( $('.j-theme-list-box2')){
              $('.j-theme-list-box2').css('background', '#FFF');
         }
-    },false);   
+    },false);  
+    var hadHide=false;  
      document.addEventListener('touchmove',function(){
      
         if( $('.j-theme-list-box2')){
             if ($('.j-theme-list-box2').hasClass('fixed')) {
-                    $('.j-theme-list-box2').fadeOut("fast");                  
+                if (!hadHide) {
+                    $('.j-theme-list-box2').fadeOut("fast");
+                    hadHide=true;   
+                }else{
+
+                }
+                                   
             }
    
         }
-    },false);     
+    },false);  
+     var hadHide2=false;
      document.addEventListener('touchend',function(){
         if( $('.j-theme-list-box2')){
-             $('.j-theme-list-box2').fadeIn("fast");;
+                if (!hadHide2) {
+                     $('.j-theme-list-box2').fadeIn("fast");
+                    hadHide2=true;   
+                }else{
+                    
+                }            
+            
         }
     },false);
 });
