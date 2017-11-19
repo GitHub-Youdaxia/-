@@ -259,7 +259,7 @@ $(document).ready(function() {
         }
         if (themeTops) {
             //加的数值越大，根据页面滚动位置导航条选中状态变化越早
-            scrollTop = scrollTop+$(window).height()*1.1;
+            scrollTop = scrollTop+$(window).height()*1;
             themeTopsLength = themeTops.length;
             for (var i = 0; i < themeTopsLength; i++) {
 
