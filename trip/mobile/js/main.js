@@ -169,7 +169,7 @@ $(document).ready(function() {
     $('.month-swiper .swiper-slide').on('click', function() {
         var index = $(this).index();
         $(this).addClass('month-active').siblings('.swiper-slide').removeClass('month-active');
-        $('.month-content>ul>li').hide('fast').eq(index).show('fast');
+        $('.month-content>ul>li').hide().eq(index).fadeIn('fast');
         $('html,body').animate({ scrollTop: 0 },
             300
         );

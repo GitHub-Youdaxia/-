@@ -420,7 +420,7 @@ margin-left: auto;margin-right: auto;padding-bottom: 1rem;}
 
 /* 产品日历 */
 .month-list-box {position: relative;overflow: hidden;height: .98rem;border-bottom: 1px solid #E8E4E7;}
-.month-list-box.fixed{position: fixed;top: 0;left: 0;width: 100%;background: #FFF;z-index: 111;}
+.month-list-box.fixed{position: fixed;top: 0;left: 0;width: 100%;background: #FFF;z-index: 111;;background: rgba(255, 255, 255, 1.0) !important;}
 .month-swiper {width: 87.5%;height: .98rem;position: relative;margin-left: auto;margin-right: auto; overflow: hidden;}
 .month-swiper .swiper-slide {box-sizing: border-box;color: #505050;line-height: .98rem;text-align: center;font-size: .28rem;text-align: center;}
 .month-swiper .swiper-slide  span{display: block;box-sizing: border-box;width: 46.15%;margin-left: auto;margin-right: auto;height: 100%;}
