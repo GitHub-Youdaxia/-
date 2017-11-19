@@ -282,16 +282,17 @@ $(document).ready(function() {
         }
     },false);   
      document.addEventListener('touchmove',function(){
+     
         if( $('.j-theme-list-box2')){
             if ($('.j-theme-list-box2').hasClass('fixed')) {
-                $('.j-theme-list-box2').hide();  
+                    $('.j-theme-list-box2').hide('fast');                  
             }
    
         }
     },false);     
      document.addEventListener('touchend',function(){
         if( $('.j-theme-list-box2')){
-             $('.j-theme-list-box2').show();
+             $('.j-theme-list-box2').show('fast');
         }
     },false);
 });
