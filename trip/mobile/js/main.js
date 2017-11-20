@@ -174,7 +174,13 @@ $(document).ready(function() {
         var index = $(this).index();
         $(this).addClass('month-active').siblings('.swiper-slide').removeClass('month-active');
         $('.month-content>ul>li').hide().eq(index).fadeIn('slow');
+        if ($('.j-month-list').hasClass('fixed')) {
+            $('html,body').animate({ scrollTop:0},
+                300
+            );
+        } else {
 
+        }
 
     })
 
@@ -216,12 +222,12 @@ $(document).ready(function() {
         $(this).addClass('theme-active').siblings('.swiper-slide').removeClass('theme-active');
         var ele = $('.theme-content>ul>li').eq(index);
         // 2.37rem是两个固定导航在顶部占据的总高度 2.37+1.89=4.26
-        if ($('.header').hasClass('fixed')) {
-            $('html,body').animate({ scrollTop: $(ele).offset().top - 2.37 * htmlFontSize },
+        if ($('.j-theme-list-box2').hasClass('fixed')) {
+            $('html,body').animate({ scrollTop: $(ele).offset().top -0.89 * htmlFontSize },
                 300
             );
         } else {
-            $('html,body').animate({ scrollTop: $(ele).offset().top - 4.26 * htmlFontSize },
+            $('html,body').animate({ scrollTop: $(ele).offset().top - 1.89* htmlFontSize },
                 300
             );
         }
