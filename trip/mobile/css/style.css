@@ -138,6 +138,7 @@ transform-origin:100% 100%;
 .header-box{height:.89rem; -webkit-transform: translate3d(0,0,0);position: relative;z-index: 2223;}
 .header{height: .89rem;line-height: .89rem;position: relative;border-bottom: 1px solid #F6F4F7;z-index: 2222 !important;}
 .header.fixed{position: fixed;left: 0;top:0;width: 100%;background: #FFF;-webkit-transform: translate3d(0,0,0);}
+.header.fixed2{position: fixed;left: 0;top:0;width: 100%;background: #FFF;-webkit-transform: translate3d(0,0,0);}
 .header .logo{position: absolute;left:.4rem ;top:0;z-index: 111;}
 .header .logo img{width: 1.6rem;height: 1.4rem;}
 .header-telephone .header-telephone-icon{display: inline-block;width: .28rem;height:.27rem ;background: url('../images/header-phone.png') no-repeat ;background-size: 100% 100%;vertical-align: middle;}
@@ -145,7 +146,7 @@ transform-origin:100% 100%;
 .header .header-telephone{float: right;margin-right: 1.2rem;}
 .header .menu-btn{position: absolute;right: 0;top:0;width:.9rem ;height: .89rem;border-left: 1px solid #F8F3F9;background: url('../images/open-menu.png') no-repeat center;background-size: .38rem .29rem;}
 .header .menu-btn.close{background: url('../images/close-menu.png') no-repeat center;background-size: .29rem .29rem}
-.menu-wrapper{background-color: #FFF;position: absolute;top:0;left: 0;width: 100%;margin-top: .9rem;border-top: 1px solid #F7F3F7;}
+.menu-wrapper{background-color: #FFF;position: fixed;top:0;left: 0;width: 100%;margin-top: .9rem;border-top: 1px solid #F7F3F7;}
 .menu-wrapper .menu{margin-top: 1rem;border-bottom: 1px solid #F7F3F7;}
 .menu-wrapper .menu li{height:.99rem ;line-height: .99rem;position: relative;border-top: 1px solid #F7F3F7;}
 .menu-wrapper .menu li a{display: block;height:100% ;padding-left: .64rem;font-size: .28rem;color: #787878;}
@@ -419,15 +420,11 @@ margin-left: auto;margin-right: auto;padding-bottom: 1rem;}
 
 
 /* 产品日历 */
-<<<<<<< HEAD
+
 .month-list-box {position: relative;overflow: hidden;height: .98rem;border-bottom: 1px solid #E8E4E7;}
 .month-list-box.fixed{position: fixed;top: 0;left: 0;width: 100%;background: #FFF;z-index: 111;;background: rgba(255, 255, 255, 1.0) !important;}
 .month-swiper {padding-left: 6.25%;padding-right: 6.25%;height: .98rem;position: relative;margin-left: auto;margin-right: auto; overflow: hidden;}
-=======
-.month-list-box {position: relative;overflow: hidden;height: .98rem;border-bottom: 1px solid #E8E4E7;background: #FFF !important;}
-.month-list-box.fixed{position: fixed;top: 0;left: 0;width: 100%;background: #FFF !important;z-index: 111;;background: rgba(255, 255, 255, 1.0) !important;}
-.month-swiper {width: 87.5%;height: .98rem;position: relative;margin-left: auto;margin-right: auto; overflow: hidden;background: #FFF !important;z-index: 111;background: rgba(255, 255, 255, 1.0) !important;}
->>>>>>> 10d20a28b30468106babaf4fe86293c9284348f0
+
 .month-swiper .swiper-slide {box-sizing: border-box;color: #505050;line-height: .98rem;text-align: center;font-size: .28rem;text-align: center;}
 .month-swiper .swiper-slide  span{display: block;box-sizing: border-box;width: 46.15%;margin-left: auto;margin-right: auto;height: 100%;}
 .month-swiper .swiper-slide.month-active span{border-bottom: .06rem solid #946194;color: #946194;}

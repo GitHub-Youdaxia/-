@@ -7,7 +7,7 @@ $(document).ready(function() {
         } else {
             $('.header').removeClass('fixed');
         }
-    });    
+    });
     /*导航*/
     var isMenuOpen = false;
     //打开菜单切换图标
@@ -23,12 +23,16 @@ $(document).ready(function() {
             $(this).removeClass('close');
             isMenuOpen = false;
             $('.menu-wrapper').hide('fast');
+            $('.header').removeClass('fixed2');
+
 
         } else {
             $('.menu-wrapper ul.submenu').hide('fast');
             $(this).addClass('close');
             isMenuOpen = true;
             $('.menu-wrapper').css('height', menuHeight).show('fast');
+            $('.header').addClass('fixed2');
+
         }
 
     })
@@ -170,16 +174,14 @@ $(document).ready(function() {
 
     });
     $('.month-swiper .swiper-slide').on('click', function() {
-          $('.header').removeClass('fixed');
+        $('.header').removeClass('fixed');
         var index = $(this).index();
         $(this).addClass('month-active').siblings('.swiper-slide').removeClass('month-active');
         $('.month-content>ul>li').hide().eq(index).fadeIn('slow');
         if ($('.j-month-list').hasClass('fixed')) {
-            $('html,body').animate({ scrollTop:0},
+            $('html,body').animate({ scrollTop: 0 },
                 300
             );
-        } else {
-
         }
 
     })
@@ -192,9 +194,9 @@ $(document).ready(function() {
             $('.j-month-list').addClass('fixed');
             $('.j-month-list .swiper-button-prev');
             $('.j-month-list .swiper-button-next');
-            if ( $('.j-month-list').hasClass('fixed')) {
+            if ($('.j-month-list').hasClass('fixed')) {
                 $('.header').removeClass('fixed');
-            }            
+            }
 
         } else {
             $('.j-month-list').removeClass('fixed');
@@ -202,17 +204,13 @@ $(document).ready(function() {
             $('.j-month-list .swiper-button-next');
         }
     });
-    document.addEventListener('touchstart',function(){      
-        if( $('.j-month-list')){
-             $('.j-month-list').css('background', '#FFF');
-        }
-    },false);   
+
 });
 
 
 /*7大主题*/
 $(document).ready(function() {
-   var htmlFontSize = $('html').css('font-size').replace(/px/, "") * 1;
+    var htmlFontSize = $('html').css('font-size').replace(/px/, "") * 1;
 
 
     /*7大主题锚点跳转*/
@@ -227,11 +225,11 @@ $(document).ready(function() {
         var ele = $('.theme-content>ul>li').eq(index);
         // 2.37rem是两个固定导航在顶部占据的总高度 2.37+1.89=4.26
         if ($('.j-theme-list-box2').hasClass('fixed')) {
-            $('html,body').animate({ scrollTop: $(ele).offset().top -0.89 * htmlFontSize },
+            $('html,body').animate({ scrollTop: $(ele).offset().top - 0.89 * htmlFontSize },
                 300
             );
         } else {
-            $('html,body').animate({ scrollTop: $(ele).offset().top - 1.89* htmlFontSize },
+            $('html,body').animate({ scrollTop: $(ele).offset().top - 1.89 * htmlFontSize },
                 300
             );
         }
@@ -260,10 +258,10 @@ $(document).ready(function() {
             $('.j-theme-list-box2').addClass('fixed').css('background', '#FFF');
             $('.j-theme-list-box2 .swiper-button-prev');
             $('.j-theme-list-box2 .swiper-button-next');
-            if ( $('.j-theme-list-box2').hasClass('fixed')) {
+            if ($('.j-theme-list-box2').hasClass('fixed')) {
                 $('.header').removeClass('fixed');
             }
-            
+
 
         } else {
             $('.j-theme-list-box2').removeClass('fixed').css('background', '#FFF');
@@ -272,7 +270,7 @@ $(document).ready(function() {
         }
         if (themeTops) {
             //加的数值越大，根据页面滚动位置导航条选中状态变化越早
-            scrollTop = scrollTop+$(window).height()*1;
+            scrollTop = scrollTop + $(window).height() * 1;
             themeTopsLength = themeTops.length;
             for (var i = 0; i < themeTopsLength; i++) {
 
@@ -293,11 +291,7 @@ $(document).ready(function() {
         window.location = $(this).find('a.to-detail').attr('href');
     })
 
-    document.addEventListener('touchstart',function(){
-        if( $('.j-theme-list-box2')){
-             $('.j-theme-list-box2').css('background', '#FFF');
-        }        
-    },false);   
+
 
 });
 /*会员尊享*/
