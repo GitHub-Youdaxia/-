@@ -202,7 +202,11 @@ $(document).ready(function() {
             $('.j-month-list .swiper-button-next');
         }
     });
-
+    document.addEventListener('touchstart',function(){      
+        if( $('.j-month-list')){
+             $('.j-month-list').css('background', '#FFF');
+        }
+    },false);   
 });
 
 
@@ -293,9 +297,6 @@ $(document).ready(function() {
         if( $('.j-theme-list-box2')){
              $('.j-theme-list-box2').css('background', '#FFF');
         }        
-        if( $('.j-month-list')){
-             $('.j-month-list').css('background', '#FFF');
-        }
     },false);   
 
 });
